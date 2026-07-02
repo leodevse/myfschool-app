@@ -1,0 +1,78 @@
+# -------------------------------------------------------------------------
+# Flutter / Dart / Pub
+# -------------------------------------------------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+/coverage/
+
+# Loại bỏ file metadata cục bộ của Flutter
+.metadata
+
+# Loại bỏ file log hoặc các bản vá lỗi khi nâng cấp Flutter
+backend_server.dart.js.deps
+flutter_01.log
+
+# -------------------------------------------------------------------------
+# Android Studio & IntelliJ IDE
+# -------------------------------------------------------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+.modules.xml
+.dictionaries/
+compiler.xml
+
+# -------------------------------------------------------------------------
+# Visual Studio Code
+# -------------------------------------------------------------------------
+.vscode/
+
+# -------------------------------------------------------------------------
+# Cấu hình riêng cho từng nền tảng (Platform Specifics)
+# -------------------------------------------------------------------------
+
+# Android
+android/.gradle/
+android/local.properties
+android/captures/
+android/*.iml
+android/.cxx/
+android/app/src/main/res/values/strings.xml (nếu chứa API key bí mật)
+
+# iOS & macOS
+ios/.internal/
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.podspec
+ios/Flutter/GeneratedPluginRegistrant.h
+ios/Flutter/GeneratedPluginRegistrant.m
+macos/Pods/
+macos/Flutter/ephemeral/
+
+# Linux / Windows / Web
+
+web/assets/
+# Thêm chính xác các dòng này vào .gitignore để chặn các file generated
+**/generated_plugin_registrant.*
+**/generated_plugins.cmake
+linux/flutter/ephemeral/
+windows/flutter/ephemeral/
+# -------------------------------------------------------------------------
+# Hệ điều hành & File rác chung
+# -------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+*.log
+*.swp
+*~
