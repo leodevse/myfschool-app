@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'profileScreen.dart';
-import 'scheduleScreen.dart';
-import 'examScheduleScreen.dart';
-import 'markReportScreen.dart';
-
+import 'phhs/scheduleScreen.dart';
+import 'phhs/examScheduleScreen.dart';
+import 'phhs/markReportScreen.dart';
+import 'phhs/applicationListScreen.dart';
+import 'phhs/taskScreen.dart';
+import 'phhs/eventScreen.dart';
+import 'phhs/clubScreen.dart';
+import 'phhs/attendanceReportScreen.dart';
+import 'bottomBar/notificationScreen.dart';
+import 'bottomBar/messageScreen.dart';
+import 'bottomBar/activityScreen.dart';
+import 'bottomBar/contactScreen.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -119,18 +127,79 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: 2,
+
+        onTap: (index) {
+
+          switch (index) {
+
+            case 0:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MessageScreen(),
+                ),
+              );
+              break;
+
+            case 1:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const NotificationScreen(),
+                ),
+              );
+              break;
+
+            case 2:
+            // Đang ở Home nên không cần chuyển
+              break;
+
+            case 3:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ActivityScreen(),
+                ),
+              );
+              break;
+
+            case 4:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ContactScreen(),
+                ),
+              );
+              break;
+          }
+        },
+
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Trò chuyện"),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: "Trò chuyện",
+          ),
+
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
             label: "Thông báo",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Trang chủ"),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Trang chủ",
+          ),
+
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             label: "Hoạt động",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.contacts), label: "Danh bạ"),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.contacts),
+            label: "Danh bạ",
+          ),
         ],
       ),
 
@@ -257,7 +326,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                     ),
 
-                    buildFeature("Nhiệm vụ, bài tập", Icons.assignment),
+                    buildFeature(
+                      "Nhiệm vụ, bài tập",
+                      Icons.assignment,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const TaskScreen(),
+                          ),
+                        );
+                      },
+                    ),
                     buildFeature(
                       "Điểm học kỳ",
                       Icons.school,
@@ -295,13 +375,57 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   childAspectRatio: 1.7,
                   children: [
-                    buildFeature("Sự kiện", Icons.event),
+                    buildFeature(
+                      "Sự kiện",
+                      Icons.event,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const EventScreen(),
+                          ),
+                        );
+                      },
+                    ),
 
-                    buildFeature("Danh sách đơn từ", Icons.description),
+                    buildFeature(
+                      "Danh sách đơn từ",
+                      Icons.description,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ApplicationListScreen(),
+                          ),
+                        );
+                      },
+                    ),
 
-                    buildFeature("Báo cáo điểm danh", Icons.fact_check),
+                    buildFeature(
+                      "Báo cáo điểm danh",
+                      Icons.fact_check,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AttendanceReportScreen(),
+                          ),
+                        );
+                      },
+                    ),
 
-                    buildFeature("Câu lạc bộ", Icons.groups),
+                    buildFeature(
+                      "Câu lạc bộ",
+                      Icons.groups,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ClubScreen(),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ],
