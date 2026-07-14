@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myfschoolse1913/vn/edu/fpt/view/homePage.dart';
+import 'package:myfschoolse1913/vn/edu/fpt/teacher/view/teacherHomeScreen.dart';
+import 'package:myfschoolse1913/vn/edu/fpt/school_staff/view/SchoolStaffHomeScreen.dart';
 
+import '../parent/view/homePage.dart';
 class RoleScreen extends StatelessWidget {
   const RoleScreen({super.key});
 
@@ -131,7 +133,7 @@ class RoleScreen extends StatelessWidget {
                       // 3. Lệnh chuyển màn hình đơn giản nhất
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const HomeScreen()),
+                        MaterialPageRoute(builder: (context) => const StaffHomeScreen()),
                       );
                     },
                     child: buildRoleCard(
@@ -154,7 +156,7 @@ class RoleScreen extends StatelessWidget {
                       // 3. Lệnh chuyển màn hình đơn giản nhất
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const HomeScreen()),
+                        MaterialPageRoute(builder: (context) => const TeacherHomeScreen()),
                       );
                     },
                     child: buildRoleCard(

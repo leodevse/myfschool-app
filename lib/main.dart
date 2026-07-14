@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'vn/edu/fpt/view/login.dart';
-import 'vn/edu/fpt/view/forgotPassword.dart';
-import 'vn/edu/fpt/view/otpVerification.dart';
-import 'vn/edu/fpt/view/resetPassword.dart';
 void main() {
   runApp(const MyApp());
 }

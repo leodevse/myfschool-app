@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../model/grade.dart';
+import '../model/grade.dart';
 
 class MarkDetailScreen extends StatelessWidget {
   final SubjectGrade subject;

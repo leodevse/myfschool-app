@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'profileScreen.dart';
-import 'phhs/scheduleScreen.dart';
-import 'phhs/examScheduleScreen.dart';
-import 'phhs/markReportScreen.dart';
-import 'phhs/applicationListScreen.dart';
-import 'phhs/taskScreen.dart';
-import 'phhs/eventScreen.dart';
-import 'phhs/clubScreen.dart';
-import 'phhs/attendanceReportScreen.dart';
-import 'bottomBar/notificationScreen.dart';
-import 'bottomBar/messageScreen.dart';
-import 'bottomBar/activityScreen.dart';
-import 'bottomBar/contactScreen.dart';
+import 'package:myfschoolse1913/vn/edu/fpt/parent/view/taskScreen.dart';
+import '../../view/profileScreen.dart';
+import 'markReportScreen.dart';
+import 'scheduleScreen.dart';
+import 'examScheduleScreen.dart';
+import 'applicationListScreen.dart';
+
+import 'eventScreen.dart';
+import 'clubScreen.dart';
+import 'attendanceReportScreen.dart';
+import '../../view/bottomBar/notificationScreen.dart';
+import '../../view/bottomBar/messageScreen.dart';
+import '../../view/bottomBar/activityScreen.dart';
+import '../../view/bottomBar/contactScreen.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
